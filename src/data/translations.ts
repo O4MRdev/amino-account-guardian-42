@@ -6,6 +6,24 @@ export interface BlogTranslation {
   howTheftHappens: {
     title: string;
     content: string;
+    examples: {
+      communities: {
+        title: string;
+        description: string;
+      };
+      device: {
+        title: string;
+        description: string;
+      };
+      location: {
+        title: string;
+        description: string;
+      };
+      email: {
+        title: string;
+        description: string;
+      };
+    };
   };
   howToRecover: {
     title: string;
@@ -29,6 +47,24 @@ export interface BlogTranslation {
       title: string;
       content: string;
     };
+    supportButton: string;
+  };
+  templates: {
+    title: string;
+    description: string;
+    recovery: {
+      title: string;
+      description: string;
+      template: string;
+    };
+    protection: {
+      title: string;
+      description: string;
+      template: string;
+    };
+    copyButton: string;
+    copiedButton: string;
+    editNote: string;
   };
   howToProtect: {
     title: string;
@@ -46,17 +82,43 @@ export interface BlogTranslation {
   conclusion: {
     title: string;
     content: string;
+    guideTitle: string;
+    guideDescription: string;
   };
   languageSelector: string;
+  sections: {
+    introduction: string;
+  };
 }
 
 export const translations: Record<Language, BlogTranslation> = {
   ar: {
     title: "كيفية استرجاع حسابك في Amino وحمايته من السرقة",
     introduction: "في الفترة الأخيرة، واجه العديد من مستخدمي تطبيق Amino مشكلة فقدان حساباتهم بشكل مفاجئ، دون أن يكون هناك اختراق مباشر أو خلل في أمان التطبيق. لكن الحقيقة أن أغلب هذه الحالات حصلت بسبب استغلال ثغرة بشرية، وليست تقنية، وهي نظام مركز المساعدة (الدعم الفني). حيث يقوم بعض الأشخاص بجمع معلومات سطحية عن صاحب الحساب ثم إرسال طلب استرجاع إلى الدعم، مدّعين ملكيتهم له.",
+    sections: {
+      introduction: "مقدمة"
+    },
     howTheftHappens: {
       title: "كيف تتم سرقة الحسابات؟",
-      content: "يقوم البعض بجمع معلومات عن الضحية مثل: المجتمعات التي شارك بها (مثل: Anime Lounge, Art Haven)، نوع الجهاز المستخدم (Android أو iOS من لقطات الشاشة)، أسلوب الكتابة أو معلومات شخصية من المنشورات لتحديد موقع الإقامة، رابط الحساب أو البريد الإلكتروني إن توفر. ثم يتواصلون مع مركز المساعدة ويقدمون هذه البيانات لإقناع الدعم بأنهم أصحاب الحساب. وفي بعض الحالات، يتم نقل ملكية الحساب إليهم بالفعل."
+      content: "يقوم البعض بجمع معلومات عن الضحية مثل: المجتمعات التي شارك بها (مثل: Anime Lounge, Art Haven)، نوع الجهاز المستخدم (Android أو iOS من لقطات الشاشة)، أسلوب الكتابة أو معلومات شخصية من المنشورات لتحديد موقع الإقامة، رابط الحساب أو البريد الإلكتروني إن توفر. ثم يتواصلون مع مركز المساعدة ويقدمون هذه البيانات لإقناع الدعم بأنهم أصحاب الحساب. وفي بعض الحالات، يتم نقل ملكية الحساب إليهم بالفعل.",
+      examples: {
+        communities: {
+          title: "المجتمعات المشارك بها",
+          description: "مثل: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "نوع الجهاز",
+          description: "Android أو iOS (من لقطات الشاشة المنشورة)"
+        },
+        location: {
+          title: "الموقع الجغرافي",
+          description: "من اللهجة أو المنشورات أو التوقيت"
+        },
+        email: {
+          title: "البريد الإلكتروني",
+          description: "إذا تم نشره في أي مكان أو مشاركته"
+        }
+      }
     },
     howToRecover: {
       title: "كيفية استرجاع حسابك إذا تم اختراقه",
@@ -79,7 +141,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "انتظار تواصل وكيل الدعم البشري",
         content: "بعد ردك على البوت، سيتم تحويل حالتك إلى وكيل دعم بشري خلال 24-48 ساعة. سيطرح عليك أسئلة إضافية للتأكد من ملكيتك للحساب مثل البريد الإلكتروني القديم أو المجتمعات المشارك بها. إذا تطابقت المعلومات، سيقوم باسترجاع الحساب لك."
-      }
+      },
+      supportButton: "فتح نموذج الدعم"
+    },
+    templates: {
+      title: "نماذج جاهزة للاستخدام",
+      description: "انسخ النماذج أدناه وعدّل المعلومات بما يناسب حالتك",
+      recovery: {
+        title: "نموذج طلب استرجاع الحساب",
+        description: "استخدم هذا النموذج في الخطوة الثالثة لتعبئة حقل Description",
+        template: `Hello Amino Support Team,
+
+My Amino account was accessed without my permission, and I can no longer log in. I believe someone else may have gained unauthorized access to my account.
+
+Here are some details to verify my identity:
+
+• Previous email address: [أدخل بريدك الإلكتروني القديم]
+• Device used: [Android/iOS]
+• Some communities I participated in: [مثل: Anime Lounge, Art Haven]
+• My username was: [اسم المستخدم القديم]
+• Profile link: [رابط حسابك من التطبيق]
+• Approximate account creation date: [التاريخ التقريبي]
+
+I have all the necessary information to prove this account belongs to me. Please help me recover access to my account.
+
+Thank you for your assistance.
+
+Best regards,
+[اسمك]`
+      },
+      protection: {
+        title: "نموذج طلب حماية الحساب",
+        description: "استخدم هذا النموذج لحماية حسابك من المحاولات المستقبلية",
+        template: `Dear Amino Support,
+
+I would like to request additional security protection for my account to prevent any unauthorized access or recovery attempts.
+
+Please add a security note to my account that:
+• No password resets should be processed unless requested from my verified email
+• No account changes should be made unless requested from within my active Amino profile
+• Any recovery attempts should require additional verification steps
+
+Account Details:
+• Amino Profile Link: [رابط حسابك]
+• Verified Email: [بريدك الإلكتروني المُتحقق منه]
+• Account Username: [اسم المستخدم]
+
+I understand that this may require additional verification steps in the future if I need support, and I accept this for enhanced security.
+
+Thank you for helping protect my account.
+
+Best regards,
+[اسمك]`
+      },
+      copyButton: "نسخ",
+      copiedButton: "تم النسخ",
+      editNote: "عدّل المعلومات الموجودة بين الأقواس [] بمعلوماتك الشخصية"
     },
     howToProtect: {
       title: "كيفية حماية حسابك مسبقاً من السرقة",
@@ -108,16 +225,39 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "خلاصة الموضوع",
-      content: "تأمين حسابك في التطبيقات الاجتماعية ليس خيارًا، بل ضرورة حتمية في عصر التكنولوجيا. مع هذه الخطوات المفصلة، يمكنك استرجاع حسابك إذا تم اختراقه وتأمينه من أي محاولة مستقبلية. تذكر: احتفظ دائماً بنسخة من معلومات حسابك في مكان آمن، واستخدم بريد إلكتروني يمكنك الوصول إليه."
+      content: "تأمين حسابك في التطبيقات الاجتماعية ليس خيارًا، بل ضرورة حتمية في عصر التكنولوجيا. مع هذه الخطوات المفصلة، يمكنك استرجاع حسابك إذا تم اختراقه وتأمينه من أي محاولة مستقبلية. تذكر: احتفظ دائماً بنسخة من معلومات حسابك في مكان آمن، واستخدم بريد إلكتروني يمكنك الوصول إليه.",
+      guideTitle: "دليل شامل للحماية",
+      guideDescription: "تابع هذه الخطوات لحماية حسابك"
     },
     languageSelector: "اختر اللغة"
   },
   en: {
     title: "How to Recover Your Amino Account and Protect It from Theft",
     introduction: "Recently, many Amino app users have faced the problem of losing their accounts suddenly, without any direct hacking or security breach in the app. The truth is that most of these cases happened due to exploiting a human vulnerability, not a technical one, which is the help center (technical support) system. Some people collect superficial information about the account owner and then send a recovery request to support, claiming ownership of the account.",
+    sections: {
+      introduction: "Introduction"
+    },
     howTheftHappens: {
       title: "How Are Accounts Stolen?",
-      content: "Some people collect information about the victim such as: communities they participated in, device type used (from screenshots), writing style or personal information from posts, account link or email if available. Then they contact the help center and provide this data to convince support that they are the account owners."
+      content: "Some people collect information about the victim such as: communities they participated in, device type used (from screenshots), writing style or personal information from posts, account link or email if available. Then they contact the help center and provide this data to convince support that they are the account owners.",
+      examples: {
+        communities: {
+          title: "Communities Participated In",
+          description: "Such as: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "Device Type",
+          description: "Android or iOS (from published screenshots)"
+        },
+        location: {
+          title: "Geographic Location",
+          description: "From dialect, posts, or timing"
+        },
+        email: {
+          title: "Email Address",
+          description: "If published anywhere or shared"
+        }
+      }
     },
     howToRecover: {
       title: "How to Recover Your Account if It Was Hacked",
@@ -140,7 +280,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "Step 5: Wait for Support Agent Contact",
         content: "After replying to the bot, your case will be transferred to a human support agent. They will ask you some questions to verify your account ownership. If the information matches, they will recover your account."
-      }
+      },
+      supportButton: "Open Support Form"
+    },
+    templates: {
+      title: "Ready-to-Use Templates",
+      description: "Copy the templates below and modify the information to suit your case",
+      recovery: {
+        title: "Account Recovery Request Template",
+        description: "Use this template in Step 3 to fill the Description field",
+        template: `Hello Amino Support Team,
+
+My Amino account was accessed without my permission, and I can no longer log in. I believe someone else may have gained unauthorized access to my account.
+
+Here are some details to verify my identity:
+
+• Previous email address: [Enter your old email]
+• Device used: [Android/iOS]
+• Some communities I participated in: [Such as: Anime Lounge, Art Haven]
+• My username was: [Your old username]
+• Profile link: [Your account link from the app]
+• Approximate account creation date: [Approximate date]
+
+I have all the necessary information to prove this account belongs to me. Please help me recover access to my account.
+
+Thank you for your assistance.
+
+Best regards,
+[Your name]`
+      },
+      protection: {
+        title: "Account Protection Request Template",
+        description: "Use this template to protect your account from future attempts",
+        template: `Dear Amino Support,
+
+I would like to request additional security protection for my account to prevent any unauthorized access or recovery attempts.
+
+Please add a security note to my account that:
+• No password resets should be processed unless requested from my verified email
+• No account changes should be made unless requested from within my active Amino profile
+• Any recovery attempts should require additional verification steps
+
+Account Details:
+• Amino Profile Link: [Your account link]
+• Verified Email: [Your verified email]
+• Account Username: [Your username]
+
+I understand that this may require additional verification steps in the future if I need support, and I accept this for enhanced security.
+
+Thank you for helping protect my account.
+
+Best regards,
+[Your name]`
+      },
+      copyButton: "Copy",
+      copiedButton: "Copied",
+      editNote: "Edit the information in brackets [] with your personal details"
     },
     howToProtect: {
       title: "How to Protect Your Account from Future Theft",
@@ -169,16 +364,39 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "Conclusion",
-      content: "Securing your account in social applications is not an option, but a necessity. With these steps, you can recover your account if it was hacked and secure it from any future attempts. If you found this post helpful, don't hesitate to share it with others."
+      content: "Securing your account in social applications is not an option, but a necessity. With these steps, you can recover your account if it was hacked and secure it from any future attempts. If you found this post helpful, don't hesitate to share it with others.",
+      guideTitle: "Comprehensive Protection Guide",
+      guideDescription: "Follow these steps to protect your account"
     },
     languageSelector: "Select Language"
   },
   es: {
     title: "Cómo Recuperar tu Cuenta de Amino y Protegerla del Robo",
     introduction: "Recientemente, muchos usuarios de la aplicación Amino han enfrentado el problema de perder sus cuentas de repente, sin ningún hackeo directo o falla de seguridad en la aplicación. La verdad es que la mayoría de estos casos ocurrieron debido a la explotación de una vulnerabilidad humana, no técnica, que es el sistema del centro de ayuda (soporte técnico). Algunas personas recopilan información superficial sobre el propietario de la cuenta y luego envían una solicitud de recuperación al soporte, reclamando la propiedad de la cuenta.",
+    sections: {
+      introduction: "Introducción"
+    },
     howTheftHappens: {
       title: "¿Cómo se Roban las Cuentas?",
-      content: "Algunas personas recopilan información sobre la víctima como: comunidades en las que participó, tipo de dispositivo usado (de capturas de pantalla), estilo de escritura o información personal de las publicaciones, enlace de cuenta o email si está disponible. Luego contactan al centro de ayuda y proporcionan estos datos para convencer al soporte de que son los propietarios de la cuenta."
+      content: "Algunas personas recopilan información sobre la víctima como: comunidades en las que participó, tipo de dispositivo usado (de capturas de pantalla), estilo de escritura o información personal de las publicaciones, enlace de cuenta o email si está disponible. Luego contactan al centro de ayuda y proporcionan estos datos para convencer al soporte de que son los propietarios de la cuenta.",
+      examples: {
+        communities: {
+          title: "Comunidades en las que Participó",
+          description: "Como: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "Tipo de Dispositivo",
+          description: "Android o iOS (de capturas de pantalla publicadas)"
+        },
+        location: {
+          title: "Ubicación Geográfica",
+          description: "Del dialecto, publicaciones o horarios"
+        },
+        email: {
+          title: "Dirección de Email",
+          description: "Si se publicó en algún lugar o se compartió"
+        }
+      }
     },
     howToRecover: {
       title: "Cómo Recuperar tu Cuenta si fue Hackeada",
@@ -201,7 +419,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "Paso 5: Esperar Contacto del Agente de Soporte",
         content: "Después de responder al bot, tu caso será transferido a un agente de soporte humano. Te harán algunas preguntas para verificar la propiedad de tu cuenta. Si la información coincide, recuperarán tu cuenta."
-      }
+      },
+      supportButton: "Abrir Formulario de Soporte"
+    },
+    templates: {
+      title: "Plantillas Listas para Usar",
+      description: "Copia las plantillas a continuación y modifica la información según tu caso",
+      recovery: {
+        title: "Plantilla de Solicitud de Recuperación de Cuenta",
+        description: "Usa esta plantilla en el Paso 3 para llenar el campo Description",
+        template: `Hola Equipo de Soporte de Amino,
+
+Mi cuenta de Amino fue accedida sin mi permiso, y ya no puedo iniciar sesión. Creo que alguien más puede haber obtenido acceso no autorizado a mi cuenta.
+
+Aquí hay algunos detalles para verificar mi identidad:
+
+• Dirección de email anterior: [Ingresa tu email anterior]
+• Dispositivo usado: [Android/iOS]
+• Algunas comunidades en las que participé: [Como: Anime Lounge, Art Haven]
+• Mi nombre de usuario era: [Tu nombre de usuario anterior]
+• Enlace del perfil: [Tu enlace de cuenta desde la app]
+• Fecha aproximada de creación de la cuenta: [Fecha aproximada]
+
+Tengo toda la información necesaria para probar que esta cuenta me pertenece. Por favor ayúdame a recuperar el acceso a mi cuenta.
+
+Gracias por tu asistencia.
+
+Saludos cordiales,
+[Tu nombre]`
+      },
+      protection: {
+        title: "Plantilla de Solicitud de Protección de Cuenta",
+        description: "Usa esta plantilla para proteger tu cuenta de intentos futuros",
+        template: `Estimado Soporte de Amino,
+
+Me gustaría solicitar protección de seguridad adicional para mi cuenta para prevenir cualquier acceso no autorizado o intentos de recuperación.
+
+Por favor agrega una nota de seguridad a mi cuenta que:
+• No se procesen restablecimientos de contraseña a menos que se soliciten desde mi email verificado
+• No se hagan cambios en la cuenta a menos que se soliciten desde dentro de mi perfil activo de Amino
+• Cualquier intento de recuperación debe requerir pasos de verificación adicionales
+
+Detalles de la Cuenta:
+• Enlace del Perfil de Amino: [Tu enlace de cuenta]
+• Email Verificado: [Tu email verificado]
+• Nombre de Usuario de la Cuenta: [Tu nombre de usuario]
+
+Entiendo que esto puede requerir pasos de verificación adicionales en el futuro si necesito soporte, y acepto esto para mayor seguridad.
+
+Gracias por ayudar a proteger mi cuenta.
+
+Saludos cordiales,
+[Tu nombre]`
+      },
+      copyButton: "Copiar",
+      copiedButton: "Copiado",
+      editNote: "Edita la información entre corchetes [] con tus detalles personales"
     },
     howToProtect: {
       title: "Cómo Proteger tu Cuenta de Futuros Robos",
@@ -230,16 +503,39 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "Conclusión",
-      content: "Asegurar tu cuenta en aplicaciones sociales no es una opción, sino una necesidad. Con estos pasos, puedes recuperar tu cuenta si fue hackeada y asegurarla de cualquier intento futuro. Si encontraste útil esta publicación, no dudes en compartirla con otros."
+      content: "Asegurar tu cuenta en aplicaciones sociales no es una opción, sino una necesidad. Con estos pasos, puedes recuperar tu cuenta si fue hackeada y asegurarla de cualquier intento futuro. Si encontraste útil esta publicación, no dudes en compartirla con otros.",
+      guideTitle: "Guía Completa de Protección",
+      guideDescription: "Sigue estos pasos para proteger tu cuenta"
     },
     languageSelector: "Seleccionar Idioma"
   },
   pt: {
     title: "Como Recuperar sua Conta do Amino e Protegê-la de Roubo",
     introduction: "Recentemente, muitos usuários do aplicativo Amino enfrentaram o problema de perder suas contas repentinamente, sem qualquer hack direto ou falha de segurança no aplicativo. A verdade é que a maioria desses casos aconteceu devido à exploração de uma vulnerabilidade humana, não técnica, que é o sistema do centro de ajuda (suporte técnico). Algumas pessoas coletam informações superficiais sobre o proprietário da conta e então enviam uma solicitação de recuperação ao suporte, reivindicando a propriedade da conta.",
+    sections: {
+      introduction: "Introdução"
+    },
     howTheftHappens: {
       title: "Como as Contas são Roubadas?",
-      content: "Algumas pessoas coletam informações sobre a vítima como: comunidades em que participou, tipo de dispositivo usado (de capturas de tela), estilo de escrita ou informações pessoais de postagens, link da conta ou email se disponível. Então eles contatam o centro de ajuda e fornecem esses dados para convencer o suporte de que são os proprietários da conta."
+      content: "Algumas pessoas coletam informações sobre a vítima como: comunidades em que participou, tipo de dispositivo usado (de capturas de tela), estilo de escrita ou informações pessoais de postagens, link da conta ou email se disponível. Então eles contatam o centro de ajuda e fornecem esses dados para convencer o suporte de que são os proprietários da conta.",
+      examples: {
+        communities: {
+          title: "Comunidades em que Participou",
+          description: "Como: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "Tipo de Dispositivo",
+          description: "Android ou iOS (de capturas de tela publicadas)"
+        },
+        location: {
+          title: "Localização Geográfica",
+          description: "Do dialeto, postagens ou horários"
+        },
+        email: {
+          title: "Endereço de Email",
+          description: "Se publicado em algum lugar ou compartilhado"
+        }
+      }
     },
     howToRecover: {
       title: "Como Recuperar sua Conta se foi Hackeada",
@@ -262,7 +558,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "Passo 5: Aguardar Contato do Agente de Suporte",
         content: "Após responder ao bot, seu caso será transferido para um agente de suporte humano. Eles farão algumas perguntas para verificar a propriedade de sua conta. Se as informações coincidirem, eles recuperarão sua conta."
-      }
+      },
+      supportButton: "Abrir Formulário de Suporte"
+    },
+    templates: {
+      title: "Modelos Prontos para Usar",
+      description: "Copie os modelos abaixo e modifique as informações para se adequar ao seu caso",
+      recovery: {
+        title: "Modelo de Solicitação de Recuperação de Conta",
+        description: "Use este modelo no Passo 3 para preencher o campo Description",
+        template: `Olá Equipe de Suporte do Amino,
+
+Minha conta do Amino foi acessada sem minha permissão, e não consigo mais fazer login. Acredito que alguém pode ter obtido acesso não autorizado à minha conta.
+
+Aqui estão alguns detalhes para verificar minha identidade:
+
+• Endereço de email anterior: [Digite seu email anterior]
+• Dispositivo usado: [Android/iOS]
+• Algumas comunidades em que participei: [Como: Anime Lounge, Art Haven]
+• Meu nome de usuário era: [Seu nome de usuário anterior]
+• Link do perfil: [Seu link de conta do app]
+• Data aproximada de criação da conta: [Data aproximada]
+
+Tenho todas as informações necessárias para provar que esta conta me pertence. Por favor, me ajude a recuperar o acesso à minha conta.
+
+Obrigado pela sua assistência.
+
+Atenciosamente,
+[Seu nome]`
+      },
+      protection: {
+        title: "Modelo de Solicitação de Proteção de Conta",
+        description: "Use este modelo para proteger sua conta de tentativas futuras",
+        template: `Caro Suporte do Amino,
+
+Gostaria de solicitar proteção de segurança adicional para minha conta para prevenir qualquer acesso não autorizado ou tentativas de recuperação.
+
+Por favor, adicione uma nota de segurança à minha conta que:
+• Nenhum reset de senha deve ser processado a menos que seja solicitado do meu email verificado
+• Nenhuma mudança na conta deve ser feita a menos que seja solicitada de dentro do meu perfil ativo do Amino
+• Qualquer tentativa de recuperação deve requerer passos de verificação adicionais
+
+Detalhes da Conta:
+• Link do Perfil Amino: [Seu link de conta]
+• Email Verificado: [Seu email verificado]
+• Nome de Usuário da Conta: [Seu nome de usuário]
+
+Entendo que isso pode requerer passos de verificação adicionais no futuro se eu precisar de suporte, e aceito isso para maior segurança.
+
+Obrigado por ajudar a proteger minha conta.
+
+Atenciosamente,
+[Seu nome]`
+      },
+      copyButton: "Copiar",
+      copiedButton: "Copiado",
+      editNote: "Edite as informações entre colchetes [] com seus detalhes pessoais"
     },
     howToProtect: {
       title: "Como Proteger sua Conta de Futuros Roubos",
@@ -291,16 +642,39 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "Conclusão",
-      content: "Proteger sua conta em aplicações sociais não é uma opção, mas uma necessidade. Com estes passos, você pode recuperar sua conta se foi hackeada e protegê-la de qualquer tentativa futura. Se achou este post útil, não hesite em compartilhá-lo com outros."
+      content: "Proteger sua conta em aplicações sociais não é uma opção, mas uma necessidade. Com estes passos, você pode recuperar sua conta se foi hackeada e protegê-la de qualquer tentativa futura. Se achou este post útil, não hesite em compartilhá-lo com outros.",
+      guideTitle: "Guia Completo de Proteção",
+      guideDescription: "Siga estes passos para proteger sua conta"
     },
     languageSelector: "Selecionar Idioma"
   },
   ru: {
     title: "Как Восстановить Аккаунт в Amino и Защитить его от Кражи",
     introduction: "В последнее время многие пользователи приложения Amino столкнулись с проблемой внезапной потери своих аккаунтов, без какого-либо прямого взлома или сбоя безопасности в приложении. Правда в том, что большинство таких случаев произошло из-за эксплуатации человеческой уязвимости, а не технической, которая заключается в системе центра помощи (технической поддержки). Некоторые люди собирают поверхностную информацию о владельце аккаунта, а затем отправляют запрос на восстановление в поддержку, заявляя о владении аккаунтом.",
+    sections: {
+      introduction: "Введение"
+    },
     howTheftHappens: {
       title: "Как Крадут Аккаунты?",
-      content: "Некоторые люди собирают информацию о жертве, такую как: сообщества, в которых они участвовали, тип используемого устройства (по скриншотам), стиль письма или личную информацию из постов, ссылку на аккаунт или email, если доступно. Затем они связываются с центром помощи и предоставляют эти данные, чтобы убедить поддержку в том, что они являются владельцами аккаунта."
+      content: "Некоторые люди собирают информацию о жертве, такую как: сообщества, в которых они участвовали, тип используемого устройства (по скриншотам), стиль письма или личную информацию из постов, ссылку на аккаунт или email, если доступно. Затем они связываются с центром помощи и предоставляют эти данные, чтобы убедить поддержку в том, что они являются владельцами аккаунта.",
+      examples: {
+        communities: {
+          title: "Сообщества, в которых Участвовали",
+          description: "Например: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "Тип Устройства",
+          description: "Android или iOS (из опубликованных скриншотов)"
+        },
+        location: {
+          title: "Географическое Расположение",
+          description: "Из диалекта, постов или времени"
+        },
+        email: {
+          title: "Email Адрес",
+          description: "Если опубликован где-либо или поделен"
+        }
+      }
     },
     howToRecover: {
       title: "Как Восстановить Аккаунт, если он был Взломан",
@@ -323,7 +697,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "Шаг 5: Дождаться Связи с Агентом Поддержки",
         content: "После ответа боту ваше дело будет передано человеку-агенту поддержки. Они зададут вам несколько вопросов для проверки владения аккаунтом. Если информация совпадет, они восстановят ваш аккаунт."
-      }
+      },
+      supportButton: "Открыть Форму Поддержки"
+    },
+    templates: {
+      title: "Готовые Шаблоны",
+      description: "Скопируйте шаблоны ниже и измените информацию в соответствии с вашим случаем",
+      recovery: {
+        title: "Шаблон Запроса на Восстановление Аккаунта",
+        description: "Используйте этот шаблон в Шаге 3 для заполнения поля Description",
+        template: `Здравствуйте, Команда Поддержки Amino,
+
+Мой аккаунт Amino был взломан без моего разрешения, и я больше не могу войти в систему. Я считаю, что кто-то другой мог получить несанкционированный доступ к моему аккаунту.
+
+Вот некоторые детали для проверки моей личности:
+
+• Предыдущий адрес электронной почты: [Введите ваш старый email]
+• Используемое устройство: [Android/iOS]
+• Некоторые сообщества, в которых я участвовал: [Например: Anime Lounge, Art Haven]
+• Мое имя пользователя было: [Ваше старое имя пользователя]
+• Ссылка на профиль: [Ваша ссылка на аккаунт из приложения]
+• Примерная дата создания аккаунта: [Примерная дата]
+
+У меня есть вся необходимая информация, чтобы доказать, что этот аккаунт принадлежит мне. Пожалуйста, помогите мне восстановить доступ к моему аккаунту.
+
+Спасибо за вашу помощь.
+
+С наилучшими пожеланиями,
+[Ваше имя]`
+      },
+      protection: {
+        title: "Шаблон Запроса на Защиту Аккаунта",
+        description: "Используйте этот шаблон для защиты вашего аккаунта от будущих попыток",
+        template: `Уважаемая Поддержка Amino,
+
+Я хотел бы запросить дополнительную защиту безопасности для моего аккаунта, чтобы предотвратить любой несанкционированный доступ или попытки восстановления.
+
+Пожалуйста, добавьте примечание безопасности к моему аккаунту, что:
+• Сбросы паролей не должны обрабатываться, если они не запрошены с моего проверенного email
+• Изменения в аккаунте не должны производиться, если они не запрошены из моего активного профиля Amino
+• Любые попытки восстановления должны требовать дополнительные шаги проверки
+
+Детали Аккаунта:
+• Ссылка на Профиль Amino: [Ваша ссылка на аккаунт]
+• Проверенный Email: [Ваш проверенный email]
+• Имя Пользователя Аккаунта: [Ваше имя пользователя]
+
+Я понимаю, что это может потребовать дополнительные шаги проверки в будущем, если мне понадобится поддержка, и я принимаю это для повышенной безопасности.
+
+Спасибо за помощь в защите моего аккаунта.
+
+С наилучшими пожеланиями,
+[Ваше имя]`
+      },
+      copyButton: "Копировать",
+      copiedButton: "Скопировано",
+      editNote: "Измените информацию в скобках [] на ваши личные данные"
     },
     howToProtect: {
       title: "Как Защитить Аккаунт от Будущих Краж",
@@ -352,16 +781,39 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "Заключение",
-      content: "Защита вашего аккаунта в социальных приложениях - это не опция, а необходимость. С помощью этих шагов вы можете восстановить свой аккаунт, если он был взломан, и защитить его от любых будущих попыток. Если вы нашли этот пост полезным, не стесняйтесь поделиться им с другими."
+      content: "Защита вашего аккаунта в социальных приложениях - это не опция, а необходимость. С помощью этих шагов вы можете восстановить свой аккаунт, если он был взломан, и защитить его от любых будущих попыток. Если вы нашли этот пост полезным, не стесняйтесь поделиться им с другими.",
+      guideTitle: "Комплексное Руководство по Защите",
+      guideDescription: "Следуйте этим шагам для защиты вашего аккаунта"
     },
     languageSelector: "Выбрать Язык"
   },
   fr: {
     title: "Comment Récupérer votre Compte Amino et le Protéger du Vol",
     introduction: "Récemment, de nombreux utilisateurs de l'application Amino ont fait face au problème de perdre leurs comptes soudainement, sans aucun piratage direct ou faille de sécurité dans l'application. La vérité est que la plupart de ces cas se sont produits en raison de l'exploitation d'une vulnérabilité humaine, pas technique, qui est le système du centre d'aide (support technique). Certaines personnes collectent des informations superficielles sur le propriétaire du compte puis envoient une demande de récupération au support, revendiquant la propriété du compte.",
+    sections: {
+      introduction: "Introduction"
+    },
     howTheftHappens: {
       title: "Comment les Comptes sont-ils Volés ?",
-      content: "Certaines personnes collectent des informations sur la victime telles que : les communautés auxquelles elle a participé, le type d'appareil utilisé (à partir de captures d'écran), le style d'écriture ou les informations personnelles des publications, le lien du compte ou l'email si disponible. Ils contactent ensuite le centre d'aide et fournissent ces données pour convaincre le support qu'ils sont les propriétaires du compte."
+      content: "Certaines personnes collectent des informations sur la victime telles que : les communautés auxquelles elle a participé, le type d'appareil utilisé (à partir de captures d'écran), le style d'écriture ou les informations personnelles des publications, le lien du compte ou l'email si disponible. Ils contactent ensuite le centre d'aide et fournissent ces données pour convaincre le support qu'ils sont les propriétaires du compte.",
+      examples: {
+        communities: {
+          title: "Communautés Participées",
+          description: "Comme: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "Type d'Appareil",
+          description: "Android ou iOS (des captures d'écran publiées)"
+        },
+        location: {
+          title: "Emplacement Géographique",
+          description: "Du dialecte, publications ou horaires"
+        },
+        email: {
+          title: "Adresse Email",
+          description: "Si publié quelque part ou partagé"
+        }
+      }
     },
     howToRecover: {
       title: "Comment Récupérer votre Compte s'il a été Piraté",
@@ -384,7 +836,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "Étape 5 : Attendre le Contact de l'Agent de Support",
         content: "Après avoir répondu au bot, votre cas sera transféré à un agent de support humain. Ils vous poseront quelques questions pour vérifier la propriété de votre compte. Si les informations correspondent, ils récupéreront votre compte."
-      }
+      },
+      supportButton: "Ouvrir le Formulaire de Support"
+    },
+    templates: {
+      title: "Modèles Prêts à Utiliser",
+      description: "Copiez les modèles ci-dessous et modifiez les informations selon votre cas",
+      recovery: {
+        title: "Modèle de Demande de Récupération de Compte",
+        description: "Utilisez ce modèle à l'Étape 3 pour remplir le champ Description",
+        template: `Bonjour Équipe de Support Amino,
+
+Mon compte Amino a été accédé sans ma permission, et je ne peux plus me connecter. Je crois que quelqu'un d'autre peut avoir obtenu un accès non autorisé à mon compte.
+
+Voici quelques détails pour vérifier mon identité :
+
+• Adresse email précédente : [Entrez votre ancien email]
+• Appareil utilisé : [Android/iOS]
+• Certaines communautés auxquelles j'ai participé : [Comme : Anime Lounge, Art Haven]
+• Mon nom d'utilisateur était : [Votre ancien nom d'utilisateur]
+• Lien du profil : [Votre lien de compte depuis l'app]
+• Date approximative de création du compte : [Date approximative]
+
+J'ai toutes les informations nécessaires pour prouver que ce compte m'appartient. S'il vous plaît, aidez-moi à récupérer l'accès à mon compte.
+
+Merci pour votre assistance.
+
+Cordialement,
+[Votre nom]`
+      },
+      protection: {
+        title: "Modèle de Demande de Protection de Compte",
+        description: "Utilisez ce modèle pour protéger votre compte des tentatives futures",
+        template: `Cher Support Amino,
+
+Je voudrais demander une protection de sécurité supplémentaire pour mon compte pour prévenir tout accès non autorisé ou tentatives de récupération.
+
+S'il vous plaît, ajoutez une note de sécurité à mon compte que :
+• Aucune réinitialisation de mot de passe ne doit être traitée sauf si demandée depuis mon email vérifié
+• Aucun changement de compte ne doit être fait sauf si demandé depuis mon profil Amino actif
+• Toute tentative de récupération doit nécessiter des étapes de vérification supplémentaires
+
+Détails du Compte :
+• Lien du Profil Amino : [Votre lien de compte]
+• Email Vérifié : [Votre email vérifié]
+• Nom d'Utilisateur du Compte : [Votre nom d'utilisateur]
+
+Je comprends que cela peut nécessiter des étapes de vérification supplémentaires à l'avenir si j'ai besoin de support, et j'accepte cela pour une sécurité renforcée.
+
+Merci d'aider à protéger mon compte.
+
+Cordialement,
+[Votre nom]`
+      },
+      copyButton: "Copier",
+      copiedButton: "Copié",
+      editNote: "Modifiez les informations entre crochets [] avec vos détails personnels"
     },
     howToProtect: {
       title: "Comment Protéger votre Compte des Vols Futurs",
@@ -413,16 +920,39 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "Conclusion",
-      content: "Sécuriser votre compte dans les applications sociales n'est pas une option, mais une nécessité. Avec ces étapes, vous pouvez récupérer votre compte s'il a été piraté et le sécuriser contre toute tentative future. Si vous avez trouvé ce post utile, n'hésitez pas à le partager avec d'autres."
+      content: "Sécuriser votre compte dans les applications sociales n'est pas une option, mais une nécessité. Avec ces étapes, vous pouvez récupérer votre compte s'il a été piraté et le sécuriser contre toute tentative future. Si vous avez trouvé ce post utile, n'hésitez pas à le partager avec d'autres.",
+      guideTitle: "Guide Complet de Protection",
+      guideDescription: "Suivez ces étapes pour protéger votre compte"
     },
     languageSelector: "Sélectionner la Langue"
   },
   de: {
     title: "Wie Sie Ihr Amino-Konto Wiederherstellen und vor Diebstahl Schützen",
     introduction: "In letzter Zeit sind viele Nutzer der Amino-App mit dem Problem konfrontiert worden, ihre Konten plötzlich zu verlieren, ohne direktes Hacking oder Sicherheitslücken in der App. Die Wahrheit ist, dass die meisten dieser Fälle aufgrund der Ausnutzung einer menschlichen, nicht technischen Schwachstelle aufgetreten sind, nämlich des Hilfe-Center-Systems (technischer Support). Einige Personen sammeln oberflächliche Informationen über den Kontoinhaber und senden dann eine Wiederherstellungsanfrage an den Support, wobei sie die Eigentümerschaft des Kontos beanspruchen.",
+    sections: {
+      introduction: "Einführung"
+    },
     howTheftHappens: {
       title: "Wie werden Konten gestohlen?",
-      content: "Einige Personen sammeln Informationen über das Opfer wie: Gemeinschaften, an denen sie teilgenommen haben, verwendeter Gerätetyp (aus Screenshots), Schreibstil oder persönliche Informationen aus Beiträgen, Kontolink oder E-Mail, falls verfügbar. Dann kontaktieren sie das Hilfe-Center und stellen diese Daten zur Verfügung, um den Support davon zu überzeugen, dass sie die Kontoinhaber sind."
+      content: "Einige Personen sammeln Informationen über das Opfer wie: Gemeinschaften, an denen sie teilgenommen haben, verwendeter Gerätetyp (aus Screenshots), Schreibstil oder persönliche Informationen aus Beiträgen, Kontolink oder E-Mail, falls verfügbar. Dann kontaktieren sie das Hilfe-Center und stellen diese Daten zur Verfügung, um den Support davon zu überzeugen, dass sie die Kontoinhaber sind.",
+      examples: {
+        communities: {
+          title: "Gemeinschaften, an denen Teilgenommen Wurde",
+          description: "Wie: Anime Lounge, Art Haven, Gaming Community"
+        },
+        device: {
+          title: "Gerätetyp",
+          description: "Android oder iOS (aus veröffentlichten Screenshots)"
+        },
+        location: {
+          title: "Geografischer Standort",
+          description: "Aus Dialekt, Beiträgen oder Zeitplan"
+        },
+        email: {
+          title: "E-Mail-Adresse",
+          description: "Wenn irgendwo veröffentlicht oder geteilt"
+        }
+      }
     },
     howToRecover: {
       title: "Wie Sie Ihr Konto wiederherstellen, wenn es gehackt wurde",
@@ -445,7 +975,62 @@ export const translations: Record<Language, BlogTranslation> = {
       step5: {
         title: "Schritt 5: Auf Kontakt des Support-Agenten warten",
         content: "Nach Ihrer Antwort an den Bot wird Ihr Fall an einen menschlichen Support-Agenten weitergeleitet. Sie werden Ihnen einige Fragen stellen, um die Eigentümerschaft Ihres Kontos zu überprüfen. Wenn die Informationen übereinstimmen, werden sie Ihr Konto wiederherstellen."
-      }
+      },
+      supportButton: "Support-Formular Öffnen"
+    },
+    templates: {
+      title: "Einsatzbereite Vorlagen",
+      description: "Kopieren Sie die Vorlagen unten und ändern Sie die Informationen entsprechend Ihrem Fall",
+      recovery: {
+        title: "Kontowiederherstellungs-Anfragevorlage",
+        description: "Verwenden Sie diese Vorlage in Schritt 3, um das Beschreibungsfeld auszufüllen",
+        template: `Hallo Amino Support-Team,
+
+Mein Amino-Konto wurde ohne meine Erlaubnis aufgerufen, und ich kann mich nicht mehr anmelden. Ich glaube, dass jemand anderes möglicherweise unbefugten Zugriff auf mein Konto erlangt hat.
+
+Hier sind einige Details zur Überprüfung meiner Identität:
+
+• Vorherige E-Mail-Adresse: [Geben Sie Ihre alte E-Mail ein]
+• Verwendetes Gerät: [Android/iOS]
+• Einige Gemeinschaften, an denen ich teilgenommen habe: [Wie: Anime Lounge, Art Haven]
+• Mein Benutzername war: [Ihr alter Benutzername]
+• Profillink: [Ihr Kontolink aus der App]
+• Ungefähres Kontoerstellungsdatum: [Ungefähres Datum]
+
+Ich habe alle notwendigen Informationen, um zu beweisen, dass dieses Konto mir gehört. Bitte helfen Sie mir, den Zugriff auf mein Konto wiederherzustellen.
+
+Vielen Dank für Ihre Unterstützung.
+
+Mit freundlichen Grüßen,
+[Ihr Name]`
+      },
+      protection: {
+        title: "Kontoschutz-Anfragevorlage",
+        description: "Verwenden Sie diese Vorlage, um Ihr Konto vor zukünftigen Versuchen zu schützen",
+        template: `Sehr geehrtes Amino Support,
+
+Ich möchte zusätzlichen Sicherheitsschutz für mein Konto anfordern, um unbefugten Zugriff oder Wiederherstellungsversuche zu verhindern.
+
+Bitte fügen Sie eine Sicherheitsnotiz zu meinem Konto hinzu, dass:
+• Keine Passwort-Zurücksetzungen verarbeitet werden sollten, es sei denn, sie werden von meiner verifizierten E-Mail angefordert
+• Keine Kontenänderungen vorgenommen werden sollten, es sei denn, sie werden von meinem aktiven Amino-Profil angefordert
+• Jeder Wiederherstellungsversuch zusätzliche Überprüfungsschritte erfordern sollte
+
+Kontodetails:
+• Amino-Profillink: [Ihr Kontolink]
+• Verifizierte E-Mail: [Ihre verifizierte E-Mail]
+• Kontobenutzername: [Ihr Benutzername]
+
+Ich verstehe, dass dies in Zukunft zusätzliche Überprüfungsschritte erfordern kann, wenn ich Support benötige, und ich akzeptiere dies für erhöhte Sicherheit.
+
+Vielen Dank für die Hilfe beim Schutz meines Kontos.
+
+Mit freundlichen Grüßen,
+[Ihr Name]`
+      },
+      copyButton: "Kopieren",
+      copiedButton: "Kopiert",
+      editNote: "Bearbeiten Sie die Informationen in Klammern [] mit Ihren persönlichen Daten"
     },
     howToProtect: {
       title: "Wie Sie Ihr Konto vor zukünftigem Diebstahl schützen",
@@ -474,7 +1059,9 @@ export const translations: Record<Language, BlogTranslation> = {
     },
     conclusion: {
       title: "Fazit",
-      content: "Die Sicherung Ihres Kontos in sozialen Anwendungen ist keine Option, sondern eine Notwendigkeit. Mit diesen Schritten können Sie Ihr Konto wiederherstellen, wenn es gehackt wurde, und es vor zukünftigen Versuchen schützen. Wenn Sie diesen Beitrag hilfreich fanden, zögern Sie nicht, ihn mit anderen zu teilen."
+      content: "Die Sicherung Ihres Kontos in sozialen Anwendungen ist keine Option, sondern eine Notwendigkeit. Mit diesen Schritten können Sie Ihr Konto wiederherstellen, wenn es gehackt wurde, und es vor zukünftigen Versuchen schützen. Wenn Sie diesen Beitrag hilfreich fanden, zögern Sie nicht, ihn mit anderen zu teilen.",
+      guideTitle: "Umfassender Schutzleitfaden",
+      guideDescription: "Folgen Sie diesen Schritten, um Ihr Konto zu schützen"
     },
     languageSelector: "Sprache Auswählen"
   }

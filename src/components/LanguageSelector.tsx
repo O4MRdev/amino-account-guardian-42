@@ -29,17 +29,28 @@ export const LanguageSelector: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm" className="gap-2">
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="gap-2 bg-card/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-white transition-all duration-300 shadow-soft hover:shadow-glow"
+        >
           <Globe className="h-4 w-4" />
           {currentLanguage?.flag} {currentLanguage?.name}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent 
+        align="end" 
+        className="w-48 bg-card/95 backdrop-blur-sm border-primary/20 shadow-elegant"
+      >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => setLanguage(lang.code)}
-            className={`cursor-pointer ${language === lang.code ? 'bg-accent' : ''}`}
+            className={`cursor-pointer transition-all duration-300 ${
+              language === lang.code 
+                ? 'bg-gradient-primary text-white shadow-soft' 
+                : 'hover:bg-primary/10 hover:text-primary'
+            }`}
           >
             <span className="mr-2">{lang.flag}</span>
             {lang.name}

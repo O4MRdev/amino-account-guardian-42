@@ -23,7 +23,7 @@ export const BlogContent: React.FC = () => {
                 <Info className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-foreground font-montserrat">مقدمة</h2>
+                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-foreground font-montserrat">{t.sections.introduction}</h2>
                 <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">{t.introduction}</p>
               </div>
             </div>
@@ -41,7 +41,7 @@ export const BlogContent: React.FC = () => {
                 <div className="p-3 bg-white/20 rounded-xl flex-shrink-0">
                   <AlertTriangle className="h-6 w-6 sm:h-7 sm:w-7" />
                 </div>
-                <span className="text-right">{t.howTheftHappens.title}</span>
+                <span className="text-right font-montserrat">{t.howTheftHappens.title}</span>
               </CardTitle>
             </div>
             <CardContent className="p-4 sm:p-6 lg:p-8">
@@ -52,32 +52,32 @@ export const BlogContent: React.FC = () => {
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                   <Database className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">المجتمعات المشارك بها</h4>
-                    <p className="text-sm text-muted-foreground">مثل: Anime Lounge, Art Haven, Gaming Community</p>
+                    <h4 className="font-semibold text-foreground mb-1 font-montserrat">{t.howTheftHappens.examples.communities.title}</h4>
+                    <p className="text-sm text-muted-foreground">{t.howTheftHappens.examples.communities.description}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                   <Smartphone className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">نوع الجهاز</h4>
-                    <p className="text-sm text-muted-foreground">Android أو iOS (من لقطات الشاشة المنشورة)</p>
+                    <h4 className="font-semibold text-foreground mb-1 font-montserrat">{t.howTheftHappens.examples.device.title}</h4>
+                    <p className="text-sm text-muted-foreground">{t.howTheftHappens.examples.device.description}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                   <MapPin className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">الموقع الجغرافي</h4>
-                    <p className="text-sm text-muted-foreground">من اللهجة أو المنشورات أو التوقيت</p>
+                    <h4 className="font-semibold text-foreground mb-1 font-montserrat">{t.howTheftHappens.examples.location.title}</h4>
+                    <p className="text-sm text-muted-foreground">{t.howTheftHappens.examples.location.description}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                   <Mail className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">البريد الإلكتروني</h4>
-                    <p className="text-sm text-muted-foreground">إذا تم نشره في أي مكان أو مشاركته</p>
+                    <h4 className="font-semibold text-foreground mb-1 font-montserrat">{t.howTheftHappens.examples.email.title}</h4>
+                    <p className="text-sm text-muted-foreground">{t.howTheftHappens.examples.email.description}</p>
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export const BlogContent: React.FC = () => {
                   
                   {/* Content */}
                   <div className="flex-1 p-4 sm:p-6 lg:p-8">
-                    <CardTitle className="text-lg sm:text-xl text-primary mb-3 sm:mb-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                    <CardTitle className="text-lg sm:text-xl text-primary mb-3 sm:mb-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 font-montserrat">
                       <span>{item.step.title}</span>
                       <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-primary/60 hidden sm:block" />
                     </CardTitle>
@@ -129,11 +129,11 @@ export const BlogContent: React.FC = () => {
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="mt-4 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm"
+                        className="mt-4 border-primary/20 text-primary hover:bg-gradient-primary hover:text-white transition-all duration-300 text-sm shadow-soft hover:shadow-glow bg-card/80 backdrop-blur-sm"
                         onClick={() => window.open('https://support.aminoapps.com/hc/en-us/requests/new?ticket_form_id=34958800453275&from_aminoapp=1', '_blank')}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        فتح نموذج الدعم
+                        {t.howToRecover.supportButton}
                       </Button>
                     )}
                   </div>
@@ -146,59 +146,22 @@ export const BlogContent: React.FC = () => {
         {/* Example Templates Section */}
         <div className="mt-8 lg:mt-12 space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">نماذج جاهزة للاستخدام</h3>
-            <p className="text-muted-foreground">انسخ النماذج أدناه وعدّل المعلومات بما يناسب حالتك</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 font-montserrat">{t.templates.title}</h3>
+            <p className="text-muted-foreground">{t.templates.description}</p>
           </div>
 
           <ExampleTemplate
-            title="نموذج طلب استرجاع الحساب"
-            description="استخدم هذا النموذج في الخطوة الثالثة لتعبئة حقل Description"
+            title={t.templates.recovery.title}
+            description={t.templates.recovery.description}
             type="recovery"
-            template={`Hello Amino Support Team,
-
-My Amino account was accessed without my permission, and I can no longer log in. I believe someone else may have gained unauthorized access to my account.
-
-Here are some details to verify my identity:
-
-• Previous email address: [أدخل بريدك الإلكتروني القديم]
-• Device used: [Android/iOS]
-• Some communities I participated in: [مثل: Anime Lounge, Art Haven]
-• My username was: [اسم المستخدم القديم]
-• Profile link: [رابط حسابك من التطبيق]
-• Approximate account creation date: [التاريخ التقريبي]
-
-I have all the necessary information to prove this account belongs to me. Please help me recover access to my account.
-
-Thank you for your assistance.
-
-Best regards,
-[اسمك]`}
+            template={t.templates.recovery.template}
           />
 
           <ExampleTemplate
-            title="نموذج طلب حماية الحساب"
-            description="استخدم هذا النموذج لحماية حسابك من المحاولات المستقبلية"
+            title={t.templates.protection.title}
+            description={t.templates.protection.description}
             type="protection"
-            template={`Dear Amino Support,
-
-I would like to request additional security protection for my account to prevent any unauthorized access or recovery attempts.
-
-Please add a security note to my account that:
-• No password resets should be processed unless requested from my verified email
-• No account changes should be made unless requested from within my active Amino profile
-• Any recovery attempts should require additional verification steps
-
-Account Details:
-• Amino Profile Link: [رابط حسابك]
-• Verified Email: [بريدك الإلكتروني المُتحقق منه]
-• Account Username: [اسم المستخدم]
-
-I understand that this may require additional verification steps in the future if I need support, and I accept this for enhanced security.
-
-Thank you for helping protect my account.
-
-Best regards,
-[اسمك]`}
+            template={t.templates.protection.template}
           />
         </div>
       </section>
@@ -210,7 +173,7 @@ Best regards,
             <div className="p-3 bg-gradient-primary rounded-2xl shadow-soft">
               <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">{t.howToProtect.title}</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground font-montserrat">{t.howToProtect.title}</h2>
           </div>
           <div className="w-16 sm:w-24 h-1 bg-gradient-primary rounded-full mx-auto"></div>
         </div>
@@ -229,7 +192,7 @@ Best regards,
                     <div className="p-2 bg-gradient-primary rounded-xl min-w-fit flex-shrink-0">
                       <span className="text-white font-bold text-sm">{index + 1}</span>
                     </div>
-                    <p className="leading-relaxed text-muted-foreground pt-1 text-sm sm:text-base">{step}</p>
+                    <p className="leading-relaxed text-muted-foreground pt-1 text-sm sm:text-base font-montserrat">{step}</p>
                   </div>
                 ))}
               </div>
@@ -245,7 +208,7 @@ Best regards,
             <div className="p-3 bg-gradient-primary rounded-2xl shadow-soft">
               <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">{t.summary.title}</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground font-montserrat">{t.summary.title}</h2>
           </div>
           <div className="w-16 sm:w-24 h-1 bg-gradient-primary rounded-full mx-auto"></div>
         </div>
@@ -258,7 +221,7 @@ Best regards,
                 <thead>
                   <tr className="bg-gradient-primary">
                     {t.summary.tableHeaders.map((header, index) => (
-                      <th key={index} className="text-right p-3 sm:p-4 lg:p-6 text-white font-bold text-sm sm:text-base lg:text-lg first:rounded-tr-3xl last:rounded-tl-3xl">
+                      <th key={index} className="text-right p-3 sm:p-4 lg:p-6 text-white font-bold text-sm sm:text-base lg:text-lg first:rounded-tr-3xl last:rounded-tl-3xl font-montserrat">
                         {header}
                       </th>
                     ))}
@@ -267,8 +230,8 @@ Best regards,
                 <tbody>
                   {t.summary.tableRows.map((row, index) => (
                     <tr key={index} className="border-b border-primary/10 hover:bg-primary/5 transition-all duration-300">
-                      <td className="p-3 sm:p-4 lg:p-6 font-semibold text-foreground text-sm sm:text-base">{row.situation}</td>
-                      <td className="p-3 sm:p-4 lg:p-6 text-muted-foreground text-sm sm:text-base">{row.action}</td>
+                      <td className="p-3 sm:p-4 lg:p-6 font-semibold text-foreground text-sm sm:text-base font-montserrat">{row.situation}</td>
+                      <td className="p-3 sm:p-4 lg:p-6 text-muted-foreground text-sm sm:text-base font-montserrat">{row.action}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -288,7 +251,7 @@ Best regards,
                 <div className="p-3 bg-white/20 rounded-xl flex-shrink-0">
                   <Users className="h-6 w-6 sm:h-7 sm:w-7" />
                 </div>
-                <span>{t.conclusion.title}</span>
+                <span className="font-montserrat">{t.conclusion.title}</span>
               </CardTitle>
             </div>
             <CardContent className="p-4 sm:p-6 lg:p-8">
@@ -299,8 +262,8 @@ Best regards,
                   <CheckCircle2 className="h-6 w-6 text-white" />
                 </div>
                 <div className="text-center sm:text-right">
-                  <div className="font-semibold text-foreground">دليل شامل للحماية</div>
-                  <div className="text-sm text-muted-foreground">تابع هذه الخطوات لحماية حسابك</div>
+                  <div className="font-semibold text-foreground font-montserrat">{t.conclusion.guideTitle}</div>
+                  <div className="text-sm text-muted-foreground">{t.conclusion.guideDescription}</div>
                 </div>
               </div>
             </CardContent>
