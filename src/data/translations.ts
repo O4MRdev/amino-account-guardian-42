@@ -175,24 +175,15 @@ Best regards,
         description: "استخدم هذا النموذج لحماية حسابك من المحاولات المستقبلية",
         template: `Dear Amino Support,
 
-I would like to request additional security protection for my account to prevent any unauthorized access or recovery attempts.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-Please add a security note to my account that:
-• No password resets should be processed unless requested from my verified email
-• No account changes should be made unless requested from within my active Amino profile
-• Any recovery attempts should require additional verification steps
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Account Details:
-• Amino Profile Link: [رابط حسابك]
-• Verified Email: [بريدك الإلكتروني المُتحقق منه]
-• Account Username: [اسم المستخدم]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-I understand that this may require additional verification steps in the future if I need support, and I accept this for enhanced security.
-
-Thank you for helping protect my account.
-
-Best regards,
-[اسمك]`
+Thank you for your continued support.`
       },
       copyButton: "نسخ",
       copiedButton: "تم النسخ",
@@ -314,24 +305,15 @@ Best regards,
         description: "Use this template to protect your account from future attempts",
         template: `Dear Amino Support,
 
-I would like to request additional security protection for my account to prevent any unauthorized access or recovery attempts.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-Please add a security note to my account that:
-• No password resets should be processed unless requested from my verified email
-• No account changes should be made unless requested from within my active Amino profile
-• Any recovery attempts should require additional verification steps
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Account Details:
-• Amino Profile Link: [Your account link]
-• Verified Email: [Your verified email]
-• Account Username: [Your username]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-I understand that this may require additional verification steps in the future if I need support, and I accept this for enhanced security.
-
-Thank you for helping protect my account.
-
-Best regards,
-[Your name]`
+Thank you for your continued support.`
       },
       copyButton: "Copy",
       copiedButton: "Copied",
@@ -451,26 +433,17 @@ Saludos cordiales,
       protection: {
         title: "Plantilla de Solicitud de Protección de Cuenta",
         description: "Usa esta plantilla para proteger tu cuenta de intentos futuros",
-        template: `Estimado Soporte de Amino,
+        template: `Dear Amino Support,
 
-Me gustaría solicitar protección de seguridad adicional para mi cuenta para prevenir cualquier acceso no autorizado o intentos de recuperación.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-Por favor agrega una nota de seguridad a mi cuenta que:
-• No se procesen restablecimientos de contraseña a menos que se soliciten desde mi email verificado
-• No se hagan cambios en la cuenta a menos que se soliciten desde dentro de mi perfil activo de Amino
-• Cualquier intento de recuperación debe requerir pasos de verificación adicionales
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Detalles de la Cuenta:
-• Enlace del Perfil de Amino: [Tu enlace de cuenta]
-• Email Verificado: [Tu email verificado]
-• Nombre de Usuario de la Cuenta: [Tu nombre de usuario]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-Entiendo que esto puede requerir pasos de verificación adicionales en el futuro si necesito soporte, y acepto esto para mayor seguridad.
-
-Gracias por ayudar a proteger mi cuenta.
-
-Saludos cordiales,
-[Tu nombre]`
+Thank you for your continued support.`
       },
       copyButton: "Copiar",
       copiedButton: "Copiado",
@@ -590,26 +563,17 @@ Atenciosamente,
       protection: {
         title: "Modelo de Solicitação de Proteção de Conta",
         description: "Use este modelo para proteger sua conta de tentativas futuras",
-        template: `Caro Suporte do Amino,
+        template: `Dear Amino Support,
 
-Gostaria de solicitar proteção de segurança adicional para minha conta para prevenir qualquer acesso não autorizado ou tentativas de recuperação.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-Por favor, adicione uma nota de segurança à minha conta que:
-• Nenhum reset de senha deve ser processado a menos que seja solicitado do meu email verificado
-• Nenhuma mudança na conta deve ser feita a menos que seja solicitada de dentro do meu perfil ativo do Amino
-• Qualquer tentativa de recuperação deve requerer passos de verificação adicionais
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Detalhes da Conta:
-• Link do Perfil Amino: [Seu link de conta]
-• Email Verificado: [Seu email verificado]
-• Nome de Usuário da Conta: [Seu nome de usuário]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-Entendo que isso pode requerer passos de verificação adicionais no futuro se eu precisar de suporte, e aceito isso para maior segurança.
-
-Obrigado por ajudar a proteger minha conta.
-
-Atenciosamente,
-[Seu nome]`
+Thank you for your continued support.`
       },
       copyButton: "Copiar",
       copiedButton: "Copiado",
@@ -729,26 +693,17 @@ Atenciosamente,
       protection: {
         title: "Шаблон Запроса на Защиту Аккаунта",
         description: "Используйте этот шаблон для защиты вашего аккаунта от будущих попыток",
-        template: `Уважаемая Поддержка Amino,
+        template: `Dear Amino Support,
 
-Я хотел бы запросить дополнительную защиту безопасности для моего аккаунта, чтобы предотвратить любой несанкционированный доступ или попытки восстановления.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-Пожалуйста, добавьте примечание безопасности к моему аккаунту, что:
-• Сбросы паролей не должны обрабатываться, если они не запрошены с моего проверенного email
-• Изменения в аккаунте не должны производиться, если они не запрошены из моего активного профиля Amino
-• Любые попытки восстановления должны требовать дополнительные шаги проверки
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Детали Аккаунта:
-• Ссылка на Профиль Amino: [Ваша ссылка на аккаунт]
-• Проверенный Email: [Ваш проверенный email]
-• Имя Пользователя Аккаунта: [Ваше имя пользователя]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-Я понимаю, что это может потребовать дополнительные шаги проверки в будущем, если мне понадобится поддержка, и я принимаю это для повышенной безопасности.
-
-Спасибо за помощь в защите моего аккаунта.
-
-С наилучшими пожеланиями,
-[Ваше имя]`
+Thank you for your continued support.`
       },
       copyButton: "Копировать",
       copiedButton: "Скопировано",
@@ -868,26 +823,17 @@ Cordialement,
       protection: {
         title: "Modèle de Demande de Protection de Compte",
         description: "Utilisez ce modèle pour protéger votre compte des tentatives futures",
-        template: `Cher Support Amino,
+        template: `Dear Amino Support,
 
-Je voudrais demander une protection de sécurité supplémentaire pour mon compte pour prévenir tout accès non autorisé ou tentatives de récupération.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-S'il vous plaît, ajoutez une note de sécurité à mon compte que :
-• Aucune réinitialisation de mot de passe ne doit être traitée sauf si demandée depuis mon email vérifié
-• Aucun changement de compte ne doit être fait sauf si demandé depuis mon profil Amino actif
-• Toute tentative de récupération doit nécessiter des étapes de vérification supplémentaires
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Détails du Compte :
-• Lien du Profil Amino : [Votre lien de compte]
-• Email Vérifié : [Votre email vérifié]
-• Nom d'Utilisateur du Compte : [Votre nom d'utilisateur]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-Je comprends que cela peut nécessiter des étapes de vérification supplémentaires à l'avenir si j'ai besoin de support, et j'accepte cela pour une sécurité renforcée.
-
-Merci d'aider à protéger mon compte.
-
-Cordialement,
-[Votre nom]`
+Thank you for your continued support.`
       },
       copyButton: "Copier",
       copiedButton: "Copié",
@@ -1007,26 +953,17 @@ Mit freundlichen Grüßen,
       protection: {
         title: "Kontoschutz-Anfragevorlage",
         description: "Verwenden Sie diese Vorlage, um Ihr Konto vor zukünftigen Versuchen zu schützen",
-        template: `Sehr geehrtes Amino Support,
+        template: `Dear Amino Support,
 
-Ich möchte zusätzlichen Sicherheitsschutz für mein Konto anfordern, um unbefugten Zugriff oder Wiederherstellungsversuche zu verhindern.
+I would like to request extra protection for my account to prevent any unauthorized access or recovery attempts.
 
-Bitte fügen Sie eine Sicherheitsnotiz zu meinem Konto hinzu, dass:
-• Keine Passwort-Zurücksetzungen verarbeitet werden sollten, es sei denn, sie werden von meiner verifizierten E-Mail angefordert
-• Keine Kontenänderungen vorgenommen werden sollten, es sei denn, sie werden von meinem aktiven Amino-Profil angefordert
-• Jeder Wiederherstellungsversuch zusätzliche Überprüfungsschritte erfordern sollte
+Please do not allow any recovery or changes to this account unless the request is made directly from my verified Amino email.
 
-Kontodetails:
-• Amino-Profillink: [Ihr Kontolink]
-• Verifizierte E-Mail: [Ihre verifizierte E-Mail]
-• Kontobenutzername: [Ihr Benutzername]
+Here are the details:
+- Amino Profile: (your profile link)
+- Email: (your email)
 
-Ich verstehe, dass dies in Zukunft zusätzliche Überprüfungsschritte erfordern kann, wenn ich Support benötige, und ich akzeptiere dies für erhöhte Sicherheit.
-
-Vielen Dank für die Hilfe beim Schutz meines Kontos.
-
-Mit freundlichen Grüßen,
-[Ihr Name]`
+Thank you for your continued support.`
       },
       copyButton: "Kopieren",
       copiedButton: "Kopiert",
