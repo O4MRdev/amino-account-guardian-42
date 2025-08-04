@@ -1,5 +1,7 @@
 import { Language } from '@/contexts/LanguageContext';
 
+// Updated protection templates - Force Vercel redeploy
+
 export interface BlogTranslation {
   title: string;
   introduction: string;
